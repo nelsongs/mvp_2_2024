@@ -1,0 +1,55 @@
+
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Buscador de Pacotes Python</title>
+    <link rel="icon" href="img/python.png" type="image/png">
+</head>
+
+<body>
+    <div class="container">
+        <!-- Cabeçalho de informações do sistema -->
+        <header>
+            <h1>Gerenciador de Pacotes Python</h1>
+        </header>
+        <!-- Porção da tela onde onde os pacotes desejados são incluidos na Base de Dados-->
+        <div class="input-dados">
+            <h3>Cadastrar pacotes na base de dados</h3>
+            <hr>
+            <form name="pacotes-python">
+                <p class="add-package">Adicionar um novo pacote</p>
+                <label for="input-nome">Nome do pacote:</label><br>
+                <input type="text" id="input-nome" name="input-nome"><br><br>
+                <span onclick="newPackage()" class="insert-btn">Adicionar Pacote</span><br><br>
+                <p></p><br><br>
+                <span onclick="closeApp()" class="close-btn">Sair</span>    
+            </form>
+        </div> 
+        <!-- Porção da tela onde o pacote desejado é escolhido e suas informações atualizadas são exibidas -->       
+        <div class="show-dados">
+            <h3>Pacotes python cadastrados</h3>
+            <hr>
+            <form name="busca-pacotes">  
+                <table id="table-pacotes">
+                    <tr class="tr-caput">
+                        <th id="th-nome">Nome do Pacote</th>
+                        <th id="th-ultversao">Última Versão</th>
+                        <th id="th-dtultversao">Data e hora da Última Versão</th>
+                        <th id="th-del"><img src="img/refresh.png" width="15px" height="15px">
+                        <th id="th-del"><img src="img/lixeira_icon.png" width="15px" height="15px">
+                    </tr>
+                </table>
+            </form> 
+        </div>
+        <script src="scripts.js"></script>
+        <footer>
+            <h4>Trabalho MVP4 - Arquitetura de SW - Especialização em Engenharia de Software PUC Rio 2023</h5>
+            <h5><a href="#">Aluno: Nelson Gomes da Silveira</a></h6>
+        </footer>
+    </div> <!--container-->  
+</body>
+</html>
